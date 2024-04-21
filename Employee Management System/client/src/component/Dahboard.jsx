@@ -129,8 +129,8 @@ const Dashboard = () => {
               <tbody>
                 {(filtereddata ? filtereddata : Employelist).map((e, index) => (
                   <tr key={index}>
-                    <td>{e.name}</td>
                     <td>{e.employeID}</td>
+                    <td>{e.name}</td>
                     <td>{e.email}</td>
                     <td>{e.destination}</td>
                     <td>{e.gender}</td>
@@ -163,21 +163,6 @@ const Dashboard = () => {
                 </div>
               </div>
             )}
-          </div>
-          <div className="flex gap-2">
-            <button
-              className="btn btn-danger rounded-sm"
-              onClick={Handleondelete}
-            >
-              <i className="fa fa-trash-o me-1"></i> Delete
-            </button>
-            <button
-              className="btn btn-outline-secondary rounded-sm bg-danger-25"
-              onClick={HandleonEdit}
-            >
-              {" "}
-              <i className="fa fa-edit me-1"></i>Edit
-            </button>
           </div>
         </div>
       ) : (
