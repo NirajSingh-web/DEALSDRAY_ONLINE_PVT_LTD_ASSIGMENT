@@ -12,7 +12,6 @@ const fetchuser = (req, res, next) => {
       if (token) {
         const data = jwt.verify(token, jwtsecret);
         req.users = data;
-        console.log(data);
         next();
       }
     }

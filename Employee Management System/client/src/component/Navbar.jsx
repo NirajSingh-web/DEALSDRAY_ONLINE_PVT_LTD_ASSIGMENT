@@ -30,9 +30,7 @@ const Navbar = ({ isAuthenticated, setisAuthenticated }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              {/* Logo */}
               <div className="flex-shrink-0">
-                {/* Replace with your logo */}
                 <img
                   className="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
@@ -42,7 +40,6 @@ const Navbar = ({ isAuthenticated, setisAuthenticated }) => {
               <span className="text-gray-300 px-3 py-2 rounded-md text-lg font-medium">
                 Employee Management{" "}
               </span>
-              {/* Navigation Links */}
               <div
                 className={`${
                   isMobile &&
@@ -86,8 +83,8 @@ const Navbar = ({ isAuthenticated, setisAuthenticated }) => {
                           Edit Employee
                         </span>
                       </Link>
-                      <button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <span onClick={handleonlogout}>Log Out</span>
+                      <button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={handleonlogout}>
+                        <span >Log Out</span>
                       </button>
                     </>
                   ) : (

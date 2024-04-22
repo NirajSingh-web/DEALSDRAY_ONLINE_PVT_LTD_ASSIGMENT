@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { addEmployeData } from "../store/EmployeSlice";
 const Dashboard = () => {
   const [Employelist, setEmployelist] = useState("");
-  const [Id, setid] = useState("");
   const [filtereddata, setfiltereddata] = useState();
   const [loading, setloading] = useState(false);
   const dispatch = useDispatch();
@@ -62,8 +61,6 @@ const Dashboard = () => {
     if (Employedata != "") {
       dispatch(addEmployeData(Employedata));
       Navigate("/Employee/Edit");
-    } else {
-      alert("Please select a row");
     }
   };
   // delete method
@@ -82,13 +79,10 @@ const Dashboard = () => {
         setloading(false);
         Employelist && Employelist.splice(Employedata, 1);
         alert(res_data);
-        setid("");
       } else {
         setloading(false);
         alert(res_data);
       }
-    } else {
-      alert("Please select a row");
     }
   };
   return loading ? (
